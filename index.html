@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Dilipan R - Artificial Intelligence & Data Science Student at KPRIET. Explore projects, skills, internship, and academic profile.">
+  <title>Dilipan R | AI & Data Science Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .title {
+      color: blue;
+      font-size: 30px;
+    }
+    
+   p {
+     color: var(--text-secondary);
+     font-size: 1.05rem;
+     margin-bottom: 1rem;
+    }
+    
+  </style>
+
+  <script src="projects-data.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header id="main-header">
+    <div class="container navbar">
+      <a href="#hero" class="logo-brand">
+        <span class="logo-badge">DR</span>
+        <span>Dilipan R</span>
+      </a>
+
+      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+
+      <nav id="primary-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#internship" class="nav-link">Internship</a></li>
+          <li><a href="#interests" class="nav-link">Interests</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="container hero-centered">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          AI &amp; Data Science Student
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">Dilipan R</span>
+        </h1>
+
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-card">
+            <img src="assets/images/dilipan_photo.jpg" alt="Dilipan R Profile Photo" class="avatar-img">
+          </div>
+        </div>
+
+        <h2 class="hero-subtitle">
+          Artificial Intelligence &amp; Data Science | KPR Institute of Engineering and Technology
+        </h2>
+
+        <p class="hero-description">
+          Passionate software developer and AI student dedicated to creating intelligent systems, data-driven solutions, and high-performance web applications.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Projects →</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Biography</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <article class="about-card">
+          <p class="about-text">
+            I am an Artificial Intelligence and Data Science student interested in software development, data science, machine learning, and web technologies. I enjoy building practical projects that combine technology with real-world problems. I am continuously improving my programming, problem-solving, and development skills.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon">🤖</div>
+              <h3 class="pillar-title">AI &amp; Data Science</h3>
+              <p class="pillar-description">Exploring machine learning models, database design, and data analysis algorithms.</p>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">💻</div>
+              <h3 class="pillar-title">Software Engineering</h3>
+              <p class="pillar-description">Writing clean, efficient code in Java, Python, and SQL for practical tools.</p>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">🌐</div>
+              <h3 class="pillar-title">Web Technologies</h3>
+              <p class="pillar-description">Building modern, responsive front-end and full-stack web platforms.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Technical Proficiency</span>
+          <h2 class="section-title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card"><span class="skill-icon">☕</span><h3 class="skill-name">Java</h3><span class="skill-tag">Programming</span></div>
+          <div class="skill-card"><span class="skill-icon">🐍</span><h3 class="skill-name">Python</h3><span class="skill-tag">Programming</span></div>
+          <div class="skill-card"><span class="skill-icon">🗄️</span><h3 class="skill-name">SQL</h3><span class="skill-tag">Database</span></div>
+          <div class="skill-card"><span class="skill-icon">🌐</span><h3 class="skill-name">HTML</h3><span class="skill-tag">Web Tech</span></div>
+          <div class="skill-card"><span class="skill-icon">🎨</span><h3 class="skill-name">CSS</h3><span class="skill-tag">Web Styling</span></div>
+          <div class="skill-card"><span class="skill-icon">⚡</span><h3 class="skill-name">JavaScript</h3><span class="skill-tag">Web Scripting</span></div>
+          <div class="skill-card"><span class="skill-icon">📊</span><h3 class="skill-name">Data Science</h3><span class="skill-tag">Analytics</span></div>
+          <div class="skill-card"><span class="skill-icon">🧠</span><h3 class="skill-name">Machine Learning</h3><span class="skill-tag">AI Concept</span></div>
+          <div class="skill-card"><span class="skill-icon">💾</span><h3 class="skill-name">DBMS</h3><span class="skill-tag">Database Mgmt</span></div>
+          <div class="skill-card"><span class="skill-icon">🐙</span><h3 class="skill-name">Git &amp; GitHub</h3><span class="skill-tag">Version Control</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portfolio Highlights</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 01: PharmaFog (Featured Project) -->
+          <article class="project-card card-featured" data-project-id="pharmafog">
+            <div class="project-header-row">
+              <span class="project-icon-badge" aria-hidden="true">💊</span>
+              <div class="project-badges">
+                <span class="project-status-badge status-featured">
+                  <span class="status-indicator"></span>
+                  Featured Project
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-group">
+                <h3 class="project-title">PharmaFog</h3>
+                <p class="project-subtitle">Clinical Medication Safety &amp; Risk Intelligence</p>
+              </div>
+              <p class="project-desc">A medication safety and clinical decision-support platform designed to identify potential drug-drug interactions, duplicate medications, and polypharmacy risks. Features pairwise DDI detection with severity classification (Major, Moderate, Minor), an explainable 0–100 risk scoring engine factoring polypharmacy burden and AGS Beers Criteria geriatric flags, patient regimen tracking, clinician checklists, grounded clinical insights, and audit-ready PDF report generation.</p>
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="badge">React 19</span>
+                <span class="badge">Vite</span>
+                <span class="badge">Tailwind CSS</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express.js</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">Python</span>
+                <span class="badge">FastAPI</span>
+                <span class="badge">Scikit-learn</span>
+                <span class="badge">NetworkX</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DilipanR4/pharmafog" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo" aria-label="View PharmaFog repository on GitHub (opens in a new tab)">
+                <svg class="icon-github" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>View Repository</span>
+                <svg class="icon-external" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 02: InkloomGuard (Featured Project) -->
+          <article class="project-card card-featured" data-project-id="inkloomguard">
+            <div class="project-header-row">
+              <span class="project-icon-badge" aria-hidden="true">🛡️</span>
+              <div class="project-badges">
+                <span class="project-status-badge status-featured">
+                  <span class="status-indicator"></span>
+                  Featured Project
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-group">
+                <h3 class="project-title">InkloomGuard</h3>
+                <p class="project-subtitle">Intelligent Brand Governance &amp; AI Review Platform</p>
+              </div>
+              <p class="project-desc">An enterprise-grade brand governance and pre-publication content review platform built for the CodeNexus India 2026 Hackathon. Uses a hybrid evaluation engine combining deterministic regex rules with Google Gemini LLM claim and tone analysis. Flags guideline violations with exact source citations, strictly differentiates contradicted from unsupported claims, provides intent-preserving rewrite recommendations, and enforces role-based human-in-the-loop governance (Creator, Reviewer, Manager).</p>
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="badge">React 18</span>
+                <span class="badge">Vite</span>
+                <span class="badge">Tailwind CSS</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express.js</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">Python</span>
+                <span class="badge">FastAPI</span>
+                <span class="badge">Google Gemini API</span>
+                <span class="badge">Scikit-learn</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DilipanR4/InkloomGuard" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo" aria-label="View InkloomGuard repository on GitHub (opens in a new tab)">
+                <svg class="icon-github" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>View Repository</span>
+                <svg class="icon-external" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 03: DeepGuard (Featured Project) -->
+          <article class="project-card card-featured" data-project-id="deepguard">
+            <div class="project-header-row">
+              <span class="project-icon-badge" aria-hidden="true">👁️</span>
+              <div class="project-badges">
+                <span class="project-status-badge status-featured">
+                  <span class="status-indicator"></span>
+                  Featured Project
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-group">
+                <h3 class="project-title">DeepGuard</h3>
+                <p class="project-subtitle">Deepfake Image Detection</p>
+              </div>
+              <p class="project-desc">Built a prototype classifying images as REAL or DEEPFAKE using an EfficientNet-B0 model. Processed image datasets, wired PyTorch inference to FastAPI, and built an upload UI with MTCNN face detection and Grad-CAM explainability heatmaps.</p>
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="badge">Python</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">EfficientNet-B0</span>
+                <span class="badge">OpenCV</span>
+                <span class="badge">FastAPI</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DilipanR4/DeepFake-detection" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo" aria-label="View DeepGuard repository on GitHub (opens in a new tab)">
+                <svg class="icon-github" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>View Repository</span>
+                <svg class="icon-external" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 04: Campus Lost & Found (Featured Project) -->
+          <article class="project-card card-featured" data-project-id="campus-lost-found">
+            <div class="project-header-row">
+              <span class="project-icon-badge" aria-hidden="true">🔍</span>
+              <div class="project-badges">
+                <span class="project-status-badge status-featured">
+                  <span class="status-indicator"></span>
+                  Featured Project
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-group">
+                <h3 class="project-title">Campus Lost &amp; Found</h3>
+                <p class="project-subtitle">Campus Belongings Recovery &amp; Management Portal</p>
+              </div>
+              <p class="project-desc">A campus-focused web platform designed for reporting lost and found items and helping students reconnect with misplaced belongings across university facilities. Built with secure student authentication, lost/found item submission with location details, item claim tracking, direct owner contact workflows, and administrative moderation controls.</p>
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="badge">React</span>
+                <span class="badge">Vite</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express.js</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">JWT</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/DilipanR4/Campus-Lost-Found" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo" aria-label="View Campus Lost &amp; Found repository on GitHub (opens in a new tab)">
+                <svg class="icon-github" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>View Repository</span>
+                <svg class="icon-external" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="internship">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Industry Exposure</span>
+          <h2 class="section-title">Internship Experience</h2>
+        </div>
+
+        <div class="internships-list">
+          <!-- Internship 01: SmartED Innovations -->
+          <article class="internship-card">
+            <div class="internship-header">
+              <div>
+                <h3 class="company-name">SmartED Innovations</h3>
+                <div class="intern-role">Artificial Intelligence Intern</div>
+              </div>
+              <span class="intern-duration">July 2026 – October 2026</span>
+            </div>
+
+            <ul class="intern-points">
+              <li>Engineered an AI-based spam-classification pipeline using Python, text preprocessing, and machine learning techniques.</li>
+              <li>Built and evaluated NLP feature-extraction workflows to classify spam messages using labelled datasets.</li>
+              <li>Applied machine learning concepts to text classification and model evaluation.</li>
+            </ul>
+
+            <div class="intern-tech-stack">
+              <div class="tech-group">
+                <span class="tech-label">Languages:</span>
+                <span class="badge">Python</span>
+              </div>
+              <div class="tech-group">
+                <span class="tech-label">Tools &amp; Technologies:</span>
+                <span class="badge">Machine Learning</span>
+                <span class="badge">Natural Language Processing (NLP)</span>
+                <span class="badge">Text Preprocessing</span>
+                <span class="badge">Feature Extraction</span>
+                <span class="badge">Dataset Handling</span>
+                <span class="badge">Model Evaluation</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Internship 02: CodeAlpha -->
+          <article class="internship-card">
+            <div class="internship-header">
+              <div>
+                <h3 class="company-name">CodeAlpha</h3>
+                <div class="intern-role">Full Stack Developer Intern</div>
+              </div>
+              <span class="intern-duration">June 2026 – July 2026</span>
+            </div>
+
+            <ul class="intern-points">
+              <li>Developed full-stack e-commerce and social applications using React for frontend development and Node.js for backend development.</li>
+              <li>Implemented CRUD operations, authentication workflows, and RESTful APIs.</li>
+              <li>Worked with SQL and NoSQL databases to manage application data and backend operations.</li>
+            </ul>
+
+            <div class="intern-tech-stack">
+              <div class="tech-group">
+                <span class="tech-label">Languages:</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">SQL</span>
+              </div>
+              <div class="tech-group">
+                <span class="tech-label">Tools &amp; Technologies:</span>
+                <span class="badge">React.js</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">REST APIs</span>
+                <span class="badge">SQL Databases</span>
+                <span class="badge">NoSQL Databases</span>
+                <span class="badge">CRUD Operations</span>
+                <span class="badge">Authentication</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Internship 03: MayLancer Techios -->
+          <article class="internship-card">
+            <div class="internship-header">
+              <div>
+                <h3 class="company-name">MayLancer Techios</h3>
+                <div class="intern-role">Web Developer Intern</div>
+              </div>
+              <span class="intern-duration">December 2025 – January 2026</span>
+            </div>
+
+            <ul class="intern-points">
+              <li>Developed and deployed a responsive WordPress website with user-friendly navigation and mobile-friendly layouts.</li>
+              <li>Customized WordPress themes and integrated plugins to extend website functionality.</li>
+              <li>Managed website pages and structured content to improve usability and presentation.</li>
+            </ul>
+
+            <div class="intern-tech-stack">
+              <div class="tech-group">
+                <span class="tech-label">Languages:</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+              </div>
+              <div class="tech-group">
+                <span class="tech-label">Tools &amp; Technologies:</span>
+                <span class="badge">WordPress</span>
+                <span class="badge">WordPress Themes</span>
+                <span class="badge">Plugins</span>
+                <span class="badge">Responsive Web Design</span>
+                <span class="badge">Website Deployment</span>
+                <span class="badge">Content Management</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Fields of Passion</span>
+          <h2 class="section-title">Areas of Interest</h2>
+        </div>
+
+        <div class="interests-grid">
+          <div class="interest-card"><div class="interest-icon">🤖</div><div class="interest-name">Artificial Intelligence</div></div>
+          <div class="interest-card"><div class="interest-icon">📈</div><div class="interest-name">Data Science</div></div>
+          <div class="interest-card"><div class="interest-icon">🧠</div><div class="interest-name">Machine Learning</div></div>
+          <div class="interest-card"><div class="interest-icon">🌐</div><div class="interest-name">Web Development</div></div>
+          <div class="interest-card"><div class="interest-icon">💻</div><div class="interest-name">Software Development</div></div>
+          <div class="interest-card"><div class="interest-icon">🗄️</div><div class="interest-name">Database Management</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-wrapper">
+          <h3 class="contact-name">Dilipan R</h3>
+          <p class="contact-dept">Department of Artificial Intelligence &amp; Data Science</p>
+          <p style="max-width: 500px; margin: 0 auto 30px; color: #7c3aed; font-size: 1.05rem;">
+               Interested in collaboration, internship opportunities, or software project discussions? Connect with me via the links below!
+          </p>
+
+          <div class="contact-buttons">
+            <a id="email-btn" href="mailto:dilipan.r2007@example.com" class="btn btn-primary" title="Send Email">✉️ Email</a>
+            <a href="https://github.com/DilipanR4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="GitHub Profile">🐙 GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/dilipan-r-294188339/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="LinkedIn Profile">💼 LinkedIn Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Dilipan R | Department of AI &amp; DS | KPR Institute of Engineering and Technology</p>
+      <p class="footer-note">Designed for College Practical &amp; Academic Demonstration</p>
+    </div>
+  </footer>
+</body>
+</html>
