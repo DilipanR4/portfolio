@@ -2,74 +2,49 @@
  * ==========================================================================
  * PROJECTS DATA CONFIGURATION (projects-data.js)
  * ==========================================================================
- * Easily update, add, or modify projects shown on the portfolio.
+ * Dilipan R Portfolio - Projects Configuration based on Resume
  * 
- * INSTRUCTIONS FOR ADDING CAMPUS LOST & FOUND REPOSITORY URL:
- * When the repository is ready, simply paste the GitHub URL into the `repoUrl`
- * field of the "campus-lost-found" object below (e.g., "https://github.com/DilipanR4/campus-lost-found").
- * The project card will automatically display the working GitHub button!
+ * Featured projects with working GitHub repositories, technology stacks,
+ * and individual color themes (Orange, Purple, Electric Blue, Pink).
  */
 
 const PROJECTS_DATA = [
   {
-    id: "pharmafog",
-    title: "PharmaFog",
-    subtitle: "Clinical Medication Safety & Risk Intelligence",
-    status: {
-      label: "Featured Project",
-      type: "featured" // 'featured' | 'in-development' | 'completed'
-    },
-    description: "A medication safety and clinical decision-support platform designed to identify potential drug-drug interactions, duplicate medications, and polypharmacy risks. Features pairwise DDI detection with severity classification (Major, Moderate, Minor), an explainable 0–100 risk scoring engine factoring polypharmacy burden and AGS Beers Criteria geriatric flags, patient regimen tracking, clinician checklists, grounded clinical insights, and audit-ready PDF report generation.",
-    tags: [
-      "React 19",
-      "Vite",
-      "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Python",
-      "FastAPI",
-      "Scikit-learn",
-      "NetworkX"
-    ],
-    // Working GitHub repository
-    repoUrl: "https://github.com/DilipanR4/pharmafog",
-    icon: "💊"
-  },
-  {
     id: "inkloomguard",
     title: "InkloomGuard",
-    subtitle: "Intelligent Brand Governance & AI Review Platform",
+    subtitle: "AI-Integrated Security Platform",
+    category: "ai-ml",
+    categoryLabel: "AI & Security",
     status: {
       label: "Featured Project",
       type: "featured"
     },
-    description: "An enterprise-grade brand governance and pre-publication content review platform built for the CodeNexus India 2026 Hackathon. Uses a hybrid evaluation engine combining deterministic regex rules with Google Gemini LLM claim and tone analysis. Flags guideline violations with exact source citations, strictly differentiates contradicted from unsupported claims, provides intent-preserving rewrite recommendations, and enforces role-based human-in-the-loop governance (Creator, Reviewer, Manager).",
+    description: "Integrated Express.js and FastAPI AI services using Bearer tokens and hmac.compare_digest auth. Enforced input validation, env-based secret management, CORS policies, and fail-safe fallbacks. Validated API contracts, authentication flows, and error handling across backend and AI services.",
     tags: [
-      "React 18",
-      "Vite",
-      "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
       "Python",
       "FastAPI",
-      "Google Gemini API",
-      "Scikit-learn"
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Bearer Auth",
+      "HMAC"
     ],
-    // Working GitHub repository
     repoUrl: "https://github.com/DilipanR4/InkloomGuard",
-    icon: "🛡️"
+    icon: "🛡️",
+    badgeColor: "rgba(249, 115, 22, 0.15)",
+    accentColor: "#F97316"
   },
   {
     id: "deepguard",
     title: "DeepGuard",
     subtitle: "Deepfake Image Detection",
+    category: "ai-ml",
+    categoryLabel: "Deep Learning & CV",
     status: {
       label: "Featured Project",
       type: "featured"
     },
-    description: "Built a prototype classifying images as REAL or DEEPFAKE using an EfficientNet-B0 model. Processed image datasets, wired PyTorch inference to FastAPI, and built an upload UI with MTCNN face detection and Grad-CAM explainability heatmaps.",
+    description: "Trained and deployed an EfficientNet-B0 classifier to detect REAL vs. DEEPFAKE images. Automated OpenCV image preprocessing, FastAPI inference endpoints, and an interactive dark-themed web upload interface.",
     tags: [
       "Python",
       "PyTorch",
@@ -77,30 +52,58 @@ const PROJECTS_DATA = [
       "OpenCV",
       "FastAPI"
     ],
-    // Working GitHub repository
     repoUrl: "https://github.com/DilipanR4/DeepFake-detection",
-    icon: "👁️"
+    icon: "👁️",
+    badgeColor: "rgba(59, 130, 246, 0.15)",
+    accentColor: "#3B82F6"
   },
   {
-    id: "campus-lost-found",
-    title: "Campus Lost & Found",
-    subtitle: "Campus Belongings Recovery & Management Portal",
+    id: "pharmafog",
+    title: "PharmaFog+",
+    subtitle: "Multi-Agent Polypharmacy Risk Engine",
+    category: "ai-ml",
+    categoryLabel: "AI & Healthcare",
     status: {
       label: "Featured Project",
       type: "featured"
     },
-    description: "A campus-focused web platform designed for reporting lost and found items and helping students reconnect with misplaced belongings across university facilities. Built with secure student authentication, lost/found item submission with location details, item claim tracking, direct owner contact workflows, and administrative moderation controls.",
+    description: "Engineered a polypharmacy risk engine evaluating medication inputs into actionable risk factors. Paired a scikit-learn model and rule checks in FastAPI with an interactive React/Vite dashboard for clinical decision support.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "Scikit-learn",
+      "React",
+      "Vite"
+    ],
+    repoUrl: "https://github.com/DilipanR4/pharmafog",
+    icon: "💊",
+    badgeColor: "rgba(139, 92, 246, 0.15)",
+    accentColor: "#8B5CF6"
+  },
+  {
+    id: "campus-lost-found",
+    title: "Campus Lost and Found",
+    subtitle: "Full-Stack Belongings Recovery Platform",
+    category: "fullstack",
+    categoryLabel: "Full Stack Web",
+    status: {
+      label: "Featured Project",
+      type: "featured"
+    },
+    description: "Developed a full-stack recovery platform supporting report submission, search, and multi-filtering. Implemented role-based admin/student access, status workflows, analytics, and HttpOnly JWT auth.",
     tags: [
       "React",
       "Vite",
       "Node.js",
-      "Express.js",
+      "Express",
       "MongoDB",
-      "JWT"
+      "Mongoose",
+      "JWT Auth"
     ],
-    // Working GitHub repository
     repoUrl: "https://github.com/DilipanR4/Campus-Lost-Found",
-    icon: "🔍"
+    icon: "🔍",
+    badgeColor: "rgba(236, 72, 153, 0.15)",
+    accentColor: "#EC4899"
   }
 ];
 
