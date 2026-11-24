@@ -312,16 +312,42 @@ function renderProjectsSection(filterCategory) {
 }
 
 /**
- * Interactive Contact Form Handler
- * Directly sends messages to Gmail via background AJAX without any redirects or Outlook popups.
+ * 8. CONTACT FORM AJAX HANDLER & DIRECT GMAIL DISPATCH
+ * Directly sends messages to Gmail without Outlook or silent clearing.
+ * If background delivery hangs or requires activation, it seamlessly opens
+ * Gmail Web with pre-filled content so messages are never lost.
  */
 function initContactForm() {
   var form = document.getElementById('contact-form');
   var feedback = document.getElementById('form-feedback');
   var submitBtn = document.getElementById('form-submit-btn');
+  var openGmailBtn = document.getElementById('btn-open-gmail');
 
   if (!form) return;
 
+  function buildGmailUrl(name, email, subject, message) {
+    var fullSubject = subject ? 'Portfolio Contact from ' + name + ': ' + subject : 'Portfolio Inquiry from ' + (name || 'Visitor');
+    var fullBody = (message || '') + '\n\n---\nSender: ' + (name || 'Anonymous') + '\nEmail: ' + (email || 'Not provided');
+    return 'https://mail.google.com/mail/?view=cm&fs=1&to=dilipan.r2007@gmail.com&su=' +
+      encodeURIComponent(fullSubject) +
+      '&body=' + encodeURIComponent(fullBody);
+  }
+
+  // 1. Dedicated "Send via Gmail Web" Button Handler
+  if (openGmailBtn) {
+    openGmailBtn.addEventListener('click', function () {
+      var name = document.getElementById('contact-name') ? document.getElementById('contact-name').value.trim() : '';
+      var email = document.getElementById('contact-email') ? document.getElementById('contact-email').value.trim() : '';
+      var subject = document.getElementById('contact-subject') ? document.getElementById('contact-subject').value.trim() : '';
+      var message = document.getElementById('contact-message') ? document.getElementById('contact-message').value.trim() : '';
+
+      var url = buildGmailUrl(name, email, subject, message);
+      window.open(url, '_blank', 'noopener,noreferrer');
+      showFeedback('Opened Gmail Web composer directly in a new tab! Simply click Send.', 'info');
+    });
+  }
+
+  // 2. Main Form Submission Handler
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -349,6 +375,8 @@ function initContactForm() {
       return;
     }
 
+    var gmailWebUrl = buildGmailUrl(name, email, subject, message);
+
     // Visual sending state on button
     if (submitBtn) {
       submitBtn.disabled = true;
@@ -359,15 +387,19 @@ function initContactForm() {
         '<span>Sending to Gmail...</span>';
     }
 
-    showFeedback('Transmitting your message directly to Dilipan\'s inbox...', 'info');
+    showFeedback("Dispatching your message directly to Dilipan's inbox...", 'info');
 
-    // Send directly in background via AJAX to Dilipan's Gmail (no redirect, no Outlook!)
+    // 4-second timeout using AbortController so users are never stuck waiting on hanging servers
+    var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timeoutId = controller ? setTimeout(function () { controller.abort(); }, 4500) : null;
+
     fetch('https://formsubmit.co/ajax/dilipan.r2007@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
+      signal: controller ? controller.signal : undefined,
       body: JSON.stringify({
         name: name,
         email: email,
@@ -379,67 +411,66 @@ function initContactForm() {
       })
     })
     .then(function (response) {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error('Network response was not ok');
+      if (timeoutId) clearTimeout(timeoutId);
+      return response.json();
     })
-    .then(function () {
-      // Direct success without any redirect!
-      showFeedback(
-        '✓ Message sent directly to Dilipan\'s Gmail! Thank you, ' + escapeHtml(name) + ' — I will reply to ' + escapeHtml(email) + ' soon.',
-        'success'
-      );
-
-      // Reset form fields
-      form.reset();
-
-      // Reset button to success state
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 
-          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-            '<polyline points="20 6 9 17 4 12"></polyline>' +
-          '</svg>' +
-          '<span>Sent Successfully!</span>';
-
-        setTimeout(function () {
-          submitBtn.innerHTML = 
-            '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-              '<line x1="22" y1="2" x2="11" y2="13"></line>' +
-              '<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>' +
-            '</svg>' +
-            '<span>Send Another Message</span>';
-        }, 3500);
+    .then(function (data) {
+      // Check if FormSubmit confirmed actual delivery
+      if (data && (data.success === 'true' || data.success === true)) {
+        showFeedback(
+        "✓ Message sent directly to Dilipan's Gmail! Thank you, " + escapeHtml(name) + " — I will reply to " + escapeHtml(email) + " soon.",
+          'success'
+        );
+        form.reset();
+        resetSubmitBtn('Sent Successfully!');
+      } else {
+        // FormSubmit requires activation or returned an error - DO NOT CLEAR FORM!
+        showFallback(
+          '⚠️ Direct background dispatch requires one-time confirmation on dilipan.r2007@gmail.com. We have opened Gmail Web with your message pre-filled so it sends right away!',
+          gmailWebUrl
+        );
       }
     })
     .catch(function () {
-      // Graceful fallback to direct web Gmail compose if browser blocks the background request
-      var gmailWebUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=dilipan.r2007@gmail.com&su=' + 
-        encodeURIComponent(subject + ' - from ' + name) + 
-        '&body=' + encodeURIComponent(message + '\n\n---\nFrom: ' + name + ' (' + email + ')');
-
-      showFeedback(
-        'Direct connection busy. <a href="' + gmailWebUrl + '" target="_blank" rel="noopener noreferrer" style="color:var(--accent-gold-light);text-decoration:underline;font-weight:700;">Click here to open and send directly via Gmail web</a>.',
-        'error'
+      if (timeoutId) clearTimeout(timeoutId);
+      // Backend timed out or failed - DO NOT CLEAR FORM!
+      showFallback(
+        "Direct server dispatch timed out. Opening your message in Gmail Web so it delivers directly to Dilipan's inbox!",
+        gmailWebUrl
       );
-
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 
-          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-            '<line x1="22" y1="2" x2="11" y2="13"></line>' +
-            '<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>' +
-          '</svg>' +
-          '<span>Retry Send</span>';
-      }
     });
   });
+
+  function showFallback(message, gmailUrl) {
+    // Open Gmail Web with the user's typed message pre-filled
+    try {
+      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    } catch (e) {}
+
+    showFeedback(
+      message + '<br><a href="' + gmailUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-flex;">🚀 Open &amp; Send in Gmail Web</a>',
+      'error'
+    );
+
+    resetSubmitBtn('Send via Gmail Web');
+  }
+
+  function resetSubmitBtn(label) {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 
+        '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+          '<line x1="22" y1="2" x2="11" y2="13"></line>' +
+          '<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>' +
+        '</svg>' +
+        '<span>' + (label || 'Send Message') + '</span>';
+    }
+  }
 
   function showFeedback(text, type) {
     if (!feedback) return;
     feedback.className = 'form-feedback ' + type;
     feedback.innerHTML = text;
-    feedback.style.display = 'flex';
+    feedback.style.display = 'block';
   }
 }

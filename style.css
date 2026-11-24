@@ -1769,6 +1769,36 @@ section {
   line-height: 1.65;
 }
 
+
+.form-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-gmail-direct {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 13px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-gmail-direct:hover {
+  background: rgba(249, 115, 22, 0.12);
+  border-color: var(--color-primary);
+  color: var(--accent-orange-light);
+  transform: translateY(-2px);
+}
+
 .form-footer {
   display: flex;
   justify-content: space-between;
