@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=6.1">
+  <link rel="stylesheet" href="style.css?v=7.0">
 
   <!-- Projects Data & Logic -->
   <script src="projects-data.js"></script>
@@ -87,16 +87,16 @@
 
           <!-- Role Indicators -->
           <div class="hero-role-indicators">
-            <span class="role-tag">Full Stack Developer</span>
-            <span class="role-divider" aria-hidden="true">•</span>
-            <span class="role-tag">AI/ML Enthusiast</span>
-            <span class="role-divider" aria-hidden="true">•</span>
             <span class="role-tag">Software Engineer</span>
+            <span class="role-divider" aria-hidden="true">•</span>
+            <span class="role-tag">Full Stack &amp; Backend Developer</span>
+            <span class="role-divider" aria-hidden="true">•</span>
+            <span class="role-tag">AI &amp; Data Science</span>
           </div>
 
           <!-- Description -->
           <p class="hero-description">
-            I'm a developer passionate about building full-stack applications and AI-powered solutions. I enjoy transforming ideas into practical products through clean code, thoughtful design, and problem-solving.
+            Pre-final year Artificial Intelligence and Data Science undergraduate at KPR Institute of Engineering and Technology with hands-on experience in software engineering, full-stack web development, REST API design, microservices, and production ML prototypes using React, Node.js, FastAPI, Python, and MongoDB. Proven track record across 3 internships, national hackathons, and technical projects.
           </p>
 
           <!-- Buttons -->
@@ -262,79 +262,108 @@
           <button type="button" class="filter-btn skill-filter-btn" data-category="databases">Databases</button>
           <button type="button" class="filter-btn skill-filter-btn" data-category="aiml">AI &amp; ML</button>
           <button type="button" class="filter-btn skill-filter-btn" data-category="tools">Tools</button>
+          <button type="button" class="filter-btn skill-filter-btn" data-category="concepts">Core Concepts</button>
         </div>
 
         <!-- Skills Grid -->
         <div class="skills-grid">
           
-          <!-- Category 1: Programming & Web -->
+          <!-- Category 1: Programming Languages -->
           <div class="skill-category-card" data-category="languages">
             <div class="category-header">
               <span class="category-icon">💻</span>
-              <h3 class="category-title">Programming &amp; Web</h3>
+              <h3 class="category-title">Programming Languages</h3>
             </div>
             <div class="skill-tags-list">
               <span class="skill-pill"><span class="skill-pill-icon">🐍</span>Python</span>
-              <span class="skill-pill"><span class="skill-pill-icon">⚡</span>JavaScript</span>
               <span class="skill-pill"><span class="skill-pill-icon">☕</span>Java</span>
-              <span class="skill-pill"><span class="skill-pill-icon">⚛️</span>React</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🟢</span>Node.js</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🌐</span>HTML5</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🎨</span>CSS3</span>
-              <span class="skill-pill"><span class="skill-pill-icon">📝</span>WordPress</span>
+              <span class="skill-pill"><span class="skill-pill-icon">⚡</span>JavaScript (ES6+)</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🐬</span>SQL</span>
             </div>
           </div>
 
-          <!-- Category 2: Machine Learning & Data -->
+          <!-- Category 2: Web & Backend Engineering -->
+          <div class="skill-category-card" data-category="backend">
+            <div class="category-header">
+              <span class="category-icon">⚙️</span>
+              <h3 class="category-title">Web &amp; Backend</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-pill"><span class="skill-pill-icon">⚛️</span>React.js</span>
+              <span class="skill-pill"><span class="skill-pill-icon">⚡</span>Vite</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🟢</span>Node.js</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🚂</span>Express.js</span>
+              <span class="skill-pill"><span class="skill-pill-icon">⚡</span>FastAPI</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🌶️</span>Flask</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🔌</span>Microservices</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🌐</span>RESTful APIs</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🛡️</span>RBAC</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Databases -->
+          <div class="skill-category-card" data-category="databases">
+            <div class="category-header">
+              <span class="category-icon">🗄️</span>
+              <h3 class="category-title">Databases</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-pill"><span class="skill-pill-icon">🍃</span>MongoDB</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🍃</span>Mongoose</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🐘</span>PostgreSQL</span>
+              <span class="skill-pill"><span class="skill-pill-icon">📦</span>SQLite</span>
+              <span class="skill-pill"><span class="skill-pill-icon">⚡</span>Database Indexing</span>
+            </div>
+          </div>
+
+          <!-- Category 4: AI & Machine Learning -->
           <div class="skill-category-card" data-category="aiml">
             <div class="category-header">
               <span class="category-icon">🤖</span>
-              <h3 class="category-title">ML &amp; Data Science</h3>
+              <h3 class="category-title">AI &amp; Machine Learning</h3>
             </div>
             <div class="skill-tags-list">
               <span class="skill-pill"><span class="skill-pill-icon">🔥</span>PyTorch</span>
               <span class="skill-pill"><span class="skill-pill-icon">📊</span>scikit-learn</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🧠</span>TensorFlow/Keras</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🐼</span>pandas</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🧠</span>TensorFlow / Keras</span>
+              <span class="skill-pill"><span class="skill-pill-icon">👁️</span>OpenCV</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🔬</span>EfficientNet-B0</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🔄</span>Transfer Learning</span>
+              <span class="skill-pill"><span class="skill-pill-icon">💬</span>NLP</span>
               <span class="skill-pill"><span class="skill-pill-icon">📈</span>TF-IDF</span>
-              <span class="skill-pill"><span class="skill-pill-icon">👁️</span>EfficientNet-B0</span>
             </div>
           </div>
 
-          <!-- Category 3: Backend & Databases -->
-          <div class="skill-category-card" data-category="backend">
-            <div class="category-header">
-              <span class="category-icon">🛠️</span>
-              <h3 class="category-title">Backend &amp; Databases</h3>
-            </div>
-            <div class="skill-tags-list">
-              <span class="skill-pill"><span class="skill-pill-icon">⚡</span>FastAPI</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🌶️</span>Flask</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🚂</span>Express.js</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🔌</span>REST APIs</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🔐</span>JWT Auth</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🍃</span>MongoDB / Mongoose</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🗄️</span>SQLite / SQL</span>
-            </div>
-          </div>
-
-          <!-- Category 4: Tools & Libraries -->
+          <!-- Category 5: Developer Tools -->
           <div class="skill-category-card" data-category="tools">
             <div class="category-header">
-              <span class="category-icon">🔧</span>
-              <h3 class="category-title">Tools &amp; Libraries</h3>
+              <span class="category-icon">🛠️</span>
+              <h3 class="category-title">Developer Tools</h3>
             </div>
             <div class="skill-tags-list">
-              <span class="skill-pill"><span class="skill-pill-icon">📷</span>OpenCV</span>
-              <span class="skill-pill"><span class="skill-pill-icon">⚡</span>Vite</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🐙</span>Git</span>
-              <span class="skill-pill"><span class="skill-pill-icon">🐱</span>GitHub</span>
-              <span class="skill-pill"><span class="skill-pill-icon">💻</span>VS Code</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🌿</span>Git</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🐙</span>GitHub</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🚀</span>Postman</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🐧</span>Linux Shell</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🔐</span>Secret Management</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Core Engineering Concepts -->
+          <div class="skill-category-card" data-category="concepts">
+            <div class="category-header">
+              <span class="category-icon">📐</span>
+              <h3 class="category-title">Core Concepts</h3>
+            </div>
+            <div class="skill-tags-list">
+              <span class="skill-pill"><span class="skill-pill-icon">🧩</span>OOP</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🌳</span>Data Structures &amp; Algorithms</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🔄</span>CRUD Design</span>
+              <span class="skill-pill"><span class="skill-pill-icon">🔑</span>JWT &amp; HMAC Auth</span>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
 
@@ -675,6 +704,7 @@
 
             <div class="edu-meta">
               <span class="edu-pill">Expected March 2028</span>
+              <span class="edu-pill edu-pill-cgpa" style="background: rgba(249, 115, 22, 0.15); color: #F97316; font-weight: 700; border: 1px solid rgba(249, 115, 22, 0.3);">CGPA: 8.12 / 10</span>
               <span class="edu-location">Coimbatore, Tamil Nadu</span>
             </div>
 
@@ -695,6 +725,14 @@
             <div class="edu-badge-icon">🏆</div>
             <h3 class="edu-institution">Certifications &amp; Achievements</h3>
             <div class="edu-department" style="margin-bottom: 22px;">Industry-recognized credentials, leadership, and competitive events</div>
+
+            <div class="achievement-item">
+              <div class="achieve-icon">🏆</div>
+              <div class="achieve-text">
+                <h4>Top 50 Participant — CodeNexus India 2026 National Hackathon</h4>
+                <p>Selected among the Top 50 nationally competing against 1,000+ developer teams in rapid software engineering and AI prototyping.</p>
+              </div>
+            </div>
 
             <div class="achievement-item">
               <div class="achieve-icon">📜</div>

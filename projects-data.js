@@ -2,10 +2,7 @@
  * ==========================================================================
  * PROJECTS DATA CONFIGURATION (projects-data.js)
  * ==========================================================================
- * Dilipan R Portfolio - Projects Configuration based on Resume
- * 
- * Featured projects with working GitHub repositories, technology stacks,
- * and individual color themes (Orange, Purple, Electric Blue, Pink).
+ * Dilipan R Portfolio - Projects Configuration verbatim from Updated Resume
  */
 
 const PROJECTS_DATA = [
@@ -19,15 +16,15 @@ const PROJECTS_DATA = [
       label: "Featured Project",
       type: "featured"
     },
-    description: "Integrated Express.js and FastAPI AI services using Bearer tokens and hmac.compare_digest auth. Enforced input validation, env-based secret management, CORS policies, and fail-safe fallbacks. Validated API contracts, authentication flows, and error handling across backend and AI services.",
+    description: "Architected a dual-backend microservices orchestrator connecting an Express.js gateway and FastAPI AI inference service via constant-time hmac.compare_digest validation and Bearer tokens. Enforced strict input validation, CORS sandboxing, env-based secret management, and fail-safe fallbacks preventing service disruption during traffic anomalies.",
     tags: [
-      "Python",
       "FastAPI",
-      "Node.js",
       "Express.js",
-      "REST APIs",
-      "Bearer Auth",
-      "HMAC"
+      "Python",
+      "Node.js",
+      "Microservices",
+      "HMAC",
+      "REST APIs"
     ],
     repoUrl: "https://github.com/DilipanR4/InkloomGuard",
     icon: "🛡️",
@@ -35,22 +32,48 @@ const PROJECTS_DATA = [
     accentColor: "#F97316"
   },
   {
+    id: "campus-lost-found",
+    title: "Campus Lost and Found",
+    subtitle: "Full-Stack Recovery Portal",
+    category: "fullstack",
+    categoryLabel: "Full Stack Web",
+    status: {
+      label: "Featured Project",
+      type: "featured"
+    },
+    description: "Shipped an end-to-end campus recovery platform supporting real-time report submission, multi-attribute search, and lifecycle status tracking for campus users. Implemented Role-Based Access Control (RBAC) across Admin and Student tiers, interactive status workflows, and tamper-proof session persistence via HttpOnly cookie JWTs.",
+    tags: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "RBAC",
+      "JWT"
+    ],
+    repoUrl: "https://github.com/DilipanR4/Campus-Lost-Found",
+    icon: "🔍",
+    badgeColor: "rgba(236, 72, 153, 0.15)",
+    accentColor: "#EC4899"
+  },
+  {
     id: "deepguard",
     title: "DeepGuard",
-    subtitle: "Deepfake Image Detection",
+    subtitle: "Deepfake Image Detection Engine",
     category: "ai-ml",
     categoryLabel: "Deep Learning & CV",
     status: {
       label: "Featured Project",
       type: "featured"
     },
-    description: "Trained and deployed an EfficientNet-B0 classifier to detect REAL vs. DEEPFAKE images. Automated OpenCV image preprocessing, FastAPI inference endpoints, and an interactive dark-themed web upload interface.",
+    description: "Trained and fine-tuned a computer vision classifier on facial datasets using EfficientNet-B0 via Transfer Learning to detect authentic vs. AI-synthesized deepfake media. Automated OpenCV image preprocessing pipelines and exposed sub-150ms real-time inference endpoints paired with a responsive web upload UI.",
     tags: [
-      "Python",
       "PyTorch",
       "EfficientNet-B0",
+      "Transfer Learning",
       "OpenCV",
-      "FastAPI"
+      "FastAPI",
+      "React"
     ],
     repoUrl: "https://github.com/DilipanR4/DeepFake-detection",
     icon: "👁️",
@@ -60,54 +83,28 @@ const PROJECTS_DATA = [
   {
     id: "pharmafog",
     title: "PharmaFog+",
-    subtitle: "Multi-Agent Polypharmacy Risk Engine",
+    subtitle: "Polypharmacy Risk Analysis Engine",
     category: "ai-ml",
     categoryLabel: "AI & Healthcare",
     status: {
       label: "Featured Project",
       type: "featured"
     },
-    description: "Engineered a polypharmacy risk engine evaluating medication inputs into actionable risk factors. Paired a scikit-learn model and rule checks in FastAPI with an interactive React/Vite dashboard for clinical decision support.",
+    description: "Engineered a clinical decision engine evaluating complex drug combinations to surface adverse contraindications and risk factors in real time. Paired scikit-learn predictive scoring models with deterministic rule checks in FastAPI, surfacing risk analytics via a reactive React/Vite dashboard.",
     tags: [
-      "Python",
       "FastAPI",
-      "Scikit-learn",
+      "scikit-learn",
       "React",
-      "Vite"
+      "Vite",
+      "Python"
     ],
     repoUrl: "https://github.com/DilipanR4/pharmafog",
     icon: "💊",
     badgeColor: "rgba(139, 92, 246, 0.15)",
     accentColor: "#8B5CF6"
-  },
-  {
-    id: "campus-lost-found",
-    title: "Campus Lost and Found",
-    subtitle: "Full-Stack Belongings Recovery Platform",
-    category: "fullstack",
-    categoryLabel: "Full Stack Web",
-    status: {
-      label: "Featured Project",
-      type: "featured"
-    },
-    description: "Developed a full-stack recovery platform supporting report submission, search, and multi-filtering. Implemented role-based admin/student access, status workflows, analytics, and HttpOnly JWT auth.",
-    tags: [
-      "React",
-      "Vite",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Mongoose",
-      "JWT Auth"
-    ],
-    repoUrl: "https://github.com/DilipanR4/Campus-Lost-Found",
-    icon: "🔍",
-    badgeColor: "rgba(236, 72, 153, 0.15)",
-    accentColor: "#EC4899"
   }
 ];
 
-// Attach to window or module object for browser and Node.js access
 if (typeof window !== "undefined") {
   window.PROJECTS_DATA = PROJECTS_DATA;
 }
